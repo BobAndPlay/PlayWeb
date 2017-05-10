@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <body>
-<form action="${pageContext.request.contextPath }/image/upload" method="post" enctype="multipart/form-data">
+<form action="${pageContext.request.contextPath }/upload" method="post" enctype="multipart/form-data">
     <h2>文件上传</h2>
     文件:<input type="file" name="uploadFile"/><br/><br/>
     <input type="submit" value="上传"/>
