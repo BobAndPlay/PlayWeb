@@ -1,10 +1,10 @@
-package com.heitian.ssm.controller;
+package com.bob.ssm.controller;
 
+import com.bob.ssm.model.User;
+import com.bob.ssm.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.heitian.ssm.model.Dog;
-import com.heitian.ssm.model.User;
-import com.heitian.ssm.service.UserService;
+import com.bob.ssm.model.Dog;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

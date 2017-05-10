@@ -1,8 +1,8 @@
-package com.heitian.ssm.service.impl;
+package com.bob.ssm.service.impl;
 
-import com.heitian.ssm.dao.UserDao;
-import com.heitian.ssm.model.User;
-import com.heitian.ssm.service.UserService;
+import com.bob.ssm.dao.UserDao;
+import com.bob.ssm.model.User;
+import com.bob.ssm.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
