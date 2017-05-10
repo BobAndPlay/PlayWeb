@@ -1,5 +1,6 @@
 package com.heitian.ssm.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.heitian.ssm.model.Dog;
 import com.heitian.ssm.model.User;
@@ -39,13 +40,23 @@ public class UserController {
         return "showUser";
     }
 
-    @RequestMapping("/searchUser")
+
+    @RequestMapping(value = "/userlist", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public String userlist() throws JsonProcessingException {
+        log.info("查询所有用户信息");
+        List<User> userList = userService.getAllUser();
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.writeValueAsString(userList);
+    }
+
+    @RequestMapping("/searchUse")
     public String searchUser(HttpServletRequest request, Model model) {
         log.info("查询所有用户信息");
         String user_name = request.getParameter("user_name");
         String name = null;
         try {
-            name = new String (user_name.getBytes("ISO-8859-1"),"UTF-8");
+            name = new String(user_name.getBytes("ISO-8859-1"), "UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
