@@ -1,7 +1,9 @@
 package com.bob.ssm.controller;
 
+import com.bob.ssm.base.BaseResponse;
 import com.bob.ssm.model.User;
 import com.bob.ssm.service.UserService;
+import com.bob.ssm.util.TextUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.bob.ssm.model.Dog;
@@ -98,6 +100,34 @@ public class UserController {
         return jsonString;
     }
 
+    /**
+     * Login Interface
+     *
+     * @param request
+     * @return
+     */
+    @RequestMapping(value = "/login", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public String login(HttpServletRequest request) throws JsonProcessingException {
+        String username = request.getParameter("username");
+        String pwd = request.getParameter("pwd");
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(pwd)) {
+            BaseResponse response = new BaseResponse();
+            ObjectMapper objectMapper = new ObjectMapper();
+            response.setMsg("用户名或密码为空");
+            response.setCode("3");
+            return objectMapper.writeValueAsString(response);
+        }
+        return userService.login(username, pwd);
+    }
+
+
+    /**
+     * Add User Interface
+     *
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/add", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
     @ResponseBody
     public String add(HttpServletRequest request) {

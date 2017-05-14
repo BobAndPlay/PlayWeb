@@ -1,6 +1,7 @@
 package com.bob.ssm.service;
 
 import com.bob.ssm.model.User;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.List;
 
@@ -23,4 +24,6 @@ public interface UserService {
     void deleteUser(User user);
 
     List<User> searchUser(String name);
+
+    String login(String username, String pwd) throws JsonProcessingException;
 }

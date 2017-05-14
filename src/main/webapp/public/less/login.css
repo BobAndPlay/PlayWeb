@@ -1,0 +1,52 @@
+body {
+  background-color: #2F4050;
+}
+.login {
+  width: 500px;
+  height: 350px;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+.login .avatar {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  margin-left: -70px;
+  width: 140px;
+  height: 140px;
+  background: url(../img/monkey.png) 140px 140px / cover;
+  border-radius: 50%;
+}
+.login .uname,
+.login .upwd {
+  position: absolute;
+  left: 30px;
+  top: 120px;
+  width: 440px;
+  height: 40px;
+}
+.login .uname input,
+.login .upwd input {
+  height: 100%;
+}
+.login .upwd {
+  top: 180px;
+}
+.login .sub {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -40px;
+}
+.login .sub input {
+  width: 90px;
+  height: 40px;
+  border-radius: 5px;
+}
+.login  s {
+  position: absolute;
+  bottom:30px;
+}

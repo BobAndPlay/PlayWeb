@@ -65,6 +65,8 @@
         <url-pattern>/css/*</url-pattern>
         <url-pattern>/images/*</url-pattern>
         <url-pattern>/fonts/*</url-pattern>
+        <url-pattern>/public/*</url-pattern>
+        <url-pattern>/view/*</url-pattern>
     </servlet-mapping>
 
 
