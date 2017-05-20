@@ -1,5 +1,8 @@
 package com.bob.ssm.base;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.omg.CosNaming.NamingContextPackage.NotEmpty;
+
 /**
  * Created by Administrator on 2017/5/13.
  */
@@ -23,13 +26,14 @@ public class BaseResponse {
         this.code = code;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
-    String data;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    Object data;
 }

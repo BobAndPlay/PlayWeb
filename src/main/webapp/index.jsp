@@ -6,10 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<head>
+    <meta http-equiv="Refresh" content="0; URL=/view/login.html">
+</head>
 <body>
-<form action="${pageContext.request.contextPath }/upload" method="post" enctype="multipart/form-data">
-    <h2>文件上传</h2>
-    文件:<input type="file" name="uploadFile"/><br/><br/>
-    <input type="submit" value="上传"/>
-</form>
+<%--<form action="${pageContext.request.contextPath }/upload" method="post" enctype="multipart/form-data">--%>
+    <%--<h2>文件上传</h2>--%>
+    <%--文件:<input type="file" name="uploadFile"/><br/><br/>--%>
+    <%--<input type="submit" value="上传"/>--%>
+<%--</form>--%>
 </body>
