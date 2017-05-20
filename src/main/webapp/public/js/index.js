@@ -1,7 +1,31 @@
 /**
  * Created by zhangpeilei on 2017/5/20.
  */
-// window.load = function () {
+    $(document).ready(function(){
+
+    })
+
+//banner
+
+// index/banners
+
+    $.ajax({
+        url:'/index/banners',
+        type:'get',
+        dataType:'json',
+        success:function (result) {
+            console.log(result)
+            if(result.code==1){
+                var info =  template("bannerTpl",result);
+                console.log(info);
+                $("#bannerInfo").html(info);
+                slideHandles();
+            }
+        }
+
+    })
+
+function slideHandles(){
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
@@ -17,22 +41,4 @@
         // 如果需要滚动条
         scrollbar: '.swiper-scrollbar',
     })
-// }
-
-//banner
-
-// index/banners
-$.ajax({
-    url:'/index/banners',
-    type:'get',
-    dataType:'json',
-    success:function (result) {
-        console.log(result)
-        if(result.code==1){
-           var info =  template("bannerTpl",result.data);
-            $("#bannerInfo").html(info);
-        }
-    }
-
-})
-
+}
