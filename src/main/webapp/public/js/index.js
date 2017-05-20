@@ -23,7 +23,7 @@
 
 // index/banners
 $.ajax({
-    url:'index/banners',
+    url:'/index/banners',
     type:'get',
     dataType:'json',
     success:function (data) {

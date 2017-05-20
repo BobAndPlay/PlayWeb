@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <head>
-    <meta http-equiv="Refresh" content="0; URL=/view/login.html">
+    <meta http-equiv="Refresh" content="0; URL=/view/index.html">
 </head>
 <body>
 <%--<form action="${pageContext.request.contextPath }/upload" method="post" enctype="multipart/form-data">--%>
