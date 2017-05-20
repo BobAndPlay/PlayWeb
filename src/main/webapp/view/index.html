@@ -1,13 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="../public/less/base.css">
+    <link rel="stylesheet" href="../public/assets/Swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../public/less/index.css">
+
 </head>
 <body>
-    <div>进入首页了</div>
+<!--top start-->
+    <div class="top">
+       <div class="w">
+           <div class="top-offline">
+               <span>传智播客旗下高端在线教育品牌 </span>|
+               <a href="#">线下学院</a>
+           </div>
+           <div class="top-tel fr">
+               全国咨询热线：010-82826576
+           </div>
+       </div>
+    </div>
+<!--top end-->
+
+<!--logo start-->
+<div class="logo w">
+    <div class="logo-info">
+        <h1>
+            <a href="#">
+                <img src="../public/img/logo.png" alt="">
+            </a>
+        </h1>
+    </div>
+    <div class="login-info">
+        <a href="#">学习中心</a>
+        <a href="#">购物车</a>
+        <span>|</span>
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+    </div>
+</div>
+<!--logo end-->
+
+
+<!--nav start-->
+<div class="nav w">
+    <div class="all-subject">
+        <a href="javascript:;">
+            全部学科
+        </a>
+        <div class="subject-category">
+            <ul>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="nav-category">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">就业班</a></li>
+            <li><a href="#">精品微课</a></li>
+            <li><a href="#">免费微课</a></li>
+            <li><a href="#">问答精灵</a></li>
+            <li><a href="#">博学社</a></li>
+            <li><a href="#">学习空间</a></li>
+        </ul>
+    </div>
+    <div class="search">
+        <input type="search" placeholder="搜索课程">
+        <button></button>
+    </div>
+</div>
+<!--nav end-->
+
+<!--banner start-->
+<div class="banner">
+    <div class="swiper-container">
+            <ul  class="swiper-wrapper" id="bannerInfo">
+
+               挖个坑
+            </ul>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+            <!--<a href="javascript:;" class="current"></a>-->
+            <!--<a href="javascript:;"></a>-->
+            <!--<a href="javascript:;"></a>-->
+            <!--<a href="javascript:;"></a>-->
+            <!--<a href="javascript:;"></a>-->
+            <!--<a href="javascript:;"></a>-->
+        </div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+
+</div>
+<!--banner end-->
+
+<!--top start-->
+<!--top end-->
+
+<script type="text/template" id="bannerTpl">
+    {{each result as item}}
+    <li  class="swiper-slide"><a href="javascript:;"><img src="../public/img/banner1.jpg" alt=""></a></li>
+</script>
+<script src="../public/assets/jquery/jquery.min.js"></script>
+<script src="../public/assets/Swiper/js/swiper.jquery.js"></script>
+<script src="../public/assets/artTemplate/template.js"></script>
+<script src="../public/js/index.js"></script>
 </body>
 </html>

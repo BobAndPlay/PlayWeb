@@ -1,8 +1,65 @@
+@charset "UTF-8";
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
 body {
   padding: 0;
   margin: 0;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
-  background-color: #f4f6f8;
+  background-color: #fff;
+}
+fieldset,
+img,
+input,
+button {
+  /*fieldset组合表单中的相关元素*/
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+textarea {
+  resize: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Microsoft YaHei", "微软雅黑";
+}
+ul,
+ol {
+  list-style: none;
+  /*清除列表风格*/
 }
 img {
   display: block;
@@ -10,11 +67,52 @@ img {
 }
 a {
   display: inline-block;
+  text-decoration: none;
 }
 a:hover,
 a:focus {
   text-decoration: none;
+  color: #4baa47;
 }
-s {
+s,
+i,
+em {
+  font-style: normal;
   text-decoration: none;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+/*公共类*/
+.w {
+  /*版心 提取 */
+  width: 1190px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.hide {
+  display: none;
 }
