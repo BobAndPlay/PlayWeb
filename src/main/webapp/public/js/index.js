@@ -26,8 +26,12 @@ $.ajax({
     url:'/index/banners',
     type:'get',
     dataType:'json',
-    success:function (data) {
-        console.log(data)
+    success:function (result) {
+        console.log(result)
+        if(result.code==1){
+           var info =  template("bannerTpl",result.data);
+            $("#bannerInfo").html(info);
+        }
     }
 
 })
