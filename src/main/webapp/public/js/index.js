@@ -27,9 +27,9 @@ $.ajax({
     type:'get',
     dataType:'json',
     success:function (result) {
-        console.log(result)
         if(result.code==1){
            var info =  template("bannerTpl",result.data);
+            console.log(info);
             $("#bannerInfo").html(info);
         }
     }
@@ -44,9 +44,9 @@ $.ajax({
     success:function (result) {
         console.log(result);
         if(result.code==1){
-            var info = template("subjectTpl",result.data);
-            console.log(info);
-            $('#subjectInfo').html(info);
+            var subjectInfo = template("subjectTpl",result.data);
+            console.log(subjectInfo);
+            $('#subjectInfo').html(subjectInfo);
         }
 
     }
