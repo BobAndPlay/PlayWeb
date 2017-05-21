@@ -36,3 +36,19 @@ $.ajax({
 
 })
 
+//subjecy-category
+$.ajax({
+    url:'/index/allSubject',
+    type:'get',
+    dataType:'json',
+    success:function (result) {
+        console.log(result);
+        if(result.code==1){
+            var info = template("subjectTpl",result.data);
+            console.log(info);
+            $('#subjectInfo').html(info);
+        }
+
+    }
+})
+

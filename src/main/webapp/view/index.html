@@ -50,16 +50,8 @@
             全部学科
         </a>
         <div class="subject-category">
-            <ul>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-                <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
-
+            <ul  id="subjectInfo">
+               <!--挖个坑-->
             </ul>
         </div>
     </div>
@@ -111,12 +103,26 @@
 </div>
 <!--banner end-->
 
-<!--top start-->
-<!--top end-->
+<!--commend start-->
+<div class="commend">
+    <ul>
+        <li><a href="javascript:;"><img src="../public/img/banner-bottom1.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../public/img/banner-bottom2.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../public/img/banner-bottom3.png" alt=""></a></li>
+        <li><a href="javascript:;"><img src="../public/img/banner-bottom4.png" alt=""></a></li>
+    </ul>
+</div>
+<!--commend end-->
 
 <script type="text/template" id="bannerTpl">
     {{each result as item}}
     <li  class="swiper-slide"><a href="javascript:;"><img src="/images/{{item}}" alt=""></a></li>
+    {{/each}}
+</script>
+
+<script type="text/template" id="subjectTpl">
+    {{each result as item}}
+    <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
     {{/each}}
 </script>
 <script src="../public/assets/jquery/jquery.min.js"></script>
