@@ -76,8 +76,8 @@
 <!--banner start-->
 <div class="banner">
     <div class="swiper-container">
+        <!--<div class="swiper-wrapper"  id="bannerInfo"></div>-->
             <ul  class="swiper-wrapper" id="bannerInfo">
-
                挖个坑
             </ul>
         </div>
@@ -114,9 +114,9 @@
 </div>
 <!--commend end-->
 
-<script type="text/template" id="bannerTpl">
-    {{each result as item}}
-    <li  class="swiper-slide"><a href="javascript:;"><img src="/images/{{item}}" alt=""></a></li>
+<script type="text/html" id="bannerTpl">
+    {{each data as item}}
+    <li  class="swiper-slide"><a href="javascript:;"><img src="/images/{{item.picUrl}}" alt=""></a></li>
     {{/each}}
 </script>
 
@@ -125,9 +125,13 @@
     <li><a href="#"><span>java</span><s class="iconfont icon-left">&gt;</s></a></li>
     {{/each}}
 </script>
+
 <script src="../public/assets/jquery/jquery.min.js"></script>
 <script src="../public/assets/Swiper/js/swiper.jquery.js"></script>
+
 <script src="../public/assets/artTemplate/template.js"></script>
+
 <script src="../public/js/index.js"></script>
+
 </body>
 </html>
