@@ -165,3 +165,12 @@
   opacity: 0.3;
   margin: 0 6px;
 }
+.commend {
+  margin-left: 320px;
+}
+.commend ul li {
+  float: left;
+  width: 320px;
+  height: 100px;
+  color: #333;
+}

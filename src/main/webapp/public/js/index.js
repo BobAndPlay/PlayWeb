@@ -1,7 +1,7 @@
 /**
  * Created by zhangpeilei on 2017/5/20.
  */
-// window.load = function () {
+function bannerHandle(){
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
@@ -17,6 +17,8 @@
         // 如果需要滚动条
         scrollbar: '.swiper-scrollbar',
     })
+}
+
 // }
 
 //banner
@@ -31,6 +33,7 @@ $.ajax({
            var info =  template("bannerTpl",result.data);
             console.log(info);
             $("#bannerInfo").html(info);
+            bannerHandle();
         }
     }
 
