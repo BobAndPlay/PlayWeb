@@ -26,7 +26,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", tahoma, arial, simsun, "宋体";
-  background-color: #fff;
+  background-color: #e4e4e4;
 }
 fieldset,
 img,
@@ -67,7 +67,6 @@ img {
 }
 a {
   display: inline-block;
-  text-decoration: none;
 }
 a:hover,
 a:focus {
