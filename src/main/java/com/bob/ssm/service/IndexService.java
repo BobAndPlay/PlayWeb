@@ -11,5 +11,5 @@ import java.util.List;
  */
 public interface IndexService {
     List<WebSubject> getAllSubjects();
-    List<Banner> getBanners();
+    List<Banner> getBanners(String type);
 }

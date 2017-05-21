@@ -9,8 +9,8 @@
         <result column="title" property="title" jdbcType="VARCHAR"/>
     </resultMap>
 
-    <select id="getBanners" resultMap="bannerMap">
-        SELECT * FROM t_banner
+    <select id="getBanners" parameterType="java.lang.String" resultMap="bannerMap">
+        SELECT * FROM t_banner WHERE type = #{type}
     </select>
 
 </mapper>

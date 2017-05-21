@@ -29,7 +29,7 @@ public class IndexServiceImpl implements IndexService {
         return indexDao.getAllSubjects();
     }
 
-    public List<Banner> getBanners() {
-        return bannerDao.getBanners();
+    public List<Banner> getBanners(String type) {
+        return bannerDao.getBanners(type);
     }
 }

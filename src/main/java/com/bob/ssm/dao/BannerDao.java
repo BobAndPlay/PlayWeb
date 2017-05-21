@@ -1,6 +1,8 @@
 package com.bob.ssm.dao;
 
 import com.bob.ssm.model.Banner;
+import com.bob.ssm.model.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,5 +14,6 @@ import java.util.List;
 
 @Repository
 public interface BannerDao {
-    List<Banner> getBanners();
+
+    List<Banner> getBanners(@Param("type") String type);
 }

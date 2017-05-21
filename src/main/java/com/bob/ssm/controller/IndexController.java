@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -41,9 +42,10 @@ public class IndexController {
 
     @RequestMapping(value = "/banners", method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
     @ResponseBody
-    public String getBanners() throws JsonProcessingException {
+    public String getBanners(HttpServletRequest request) throws JsonProcessingException {
         log.info("get all banners");
-        List<Banner> banners = indexService.getBanners();
+        String type = request.getParameter("type");
+        List<Banner> banners = indexService.getBanners(type);
         ObjectMapper objectMapper = new ObjectMapper();
         BaseResponse response = new BaseResponse();
         response.setData(banners);
