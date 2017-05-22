@@ -1,7 +1,6 @@
 /**
  * Created by zhangpeilei on 2017/5/20.
  */
-bannerHandle();
 function bannerHandle(){
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
@@ -79,3 +78,31 @@ $.ajax({
     }
 
 })
+//sub-banner
+var index = 0;
+var ulLength = $('.content>ul>li').length;
+
+$("#right-arrow").click(function () {
+    if(ulLength-2<=index){
+        index=0;
+        $(".hot-live>.content>ul").offset().left=index;
+    }
+    index++;
+    $(".hot-live>.content>ul").animate({left:(-index*305)+'px'},1,'linear');
+});
+
+$("#left-arrow").click(function () {
+    // alert(index+"==")
+    console.log('into message'+index)
+    if(index <= 0){
+        index = ulLength-3;
+        console.log($(".hot-live>.content>ul"));
+        $(".hot-live>.content>ul").css({left:-index*305+'px'});
+
+        console.log($(".hot-live>.content>ul").offset().left);
+    }
+    index--;
+    var leftNumber = $('.content>ul').offset().left;
+    $("ul").animate({left:leftNumber+177+'px'},1,'linear');
+});
+
