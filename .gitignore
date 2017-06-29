@@ -1,2 +1,27 @@
+# MyEclipse IDE
+.mymetadata
+.checkstyle
+
+# Eclipse IDE
+.settings/
 target/
-.idea/
+.tern-project/
+.classpath
+.project
+.class
+.metadata
+Servers/
+# package 
+.war
+.zip
+.rar
+
+# IDEA IDE
+.idea
+*.iml
+.settings/*
+/indexes/*
+/target/*
+/src/main/webapp/WEB-INF/classes/*
+/src/main/webapp/userfiles/*
+/target/
